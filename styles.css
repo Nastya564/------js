@@ -75,6 +75,11 @@ svg {
     max-width: 240px; 
 }
 
+button {
+    background: transparent;
+    border: none;
+}
+
 .show-all-btn {
     display: inline-flex;
     align-items: center;
@@ -165,13 +170,16 @@ svg {
     .swiper-pagination {
         position: absolute;
         left: 58px;
+        width: 204px;
+        height: 12px;
     }
 
     .swiper-pagination-bullet {
         margin-right: 8px;
+        background:#B5B6BC;
     }
 
-    .show-all-btn {
+    .show-all {
         display: none;
     }
 }
