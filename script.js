@@ -20,8 +20,7 @@ function initSwiper() {
 // Обработка кнопки "Показать все"/"Скрыть"
 const toggleBtn = document.getElementById('toggle-btn');
 const brandsGrid = document.querySelector('.brands-grid');
-const svgElement = document.getElementById('toggle-btn__svg');
-
+const svgElement = document.getElementById('show-all-btn-svg');
 
 toggleBtn.addEventListener('click', function() {
     const isExpanded = brandsGrid.classList.contains('expanded');
@@ -29,14 +28,12 @@ toggleBtn.addEventListener('click', function() {
     if (isExpanded) {
         brandsGrid.classList.remove('expanded');
         toggleBtn.textContent = 'Показать все';
+        svgElement.style.transform = '';
     } else {
         brandsGrid.classList.add('expanded');
         toggleBtn.textContent = 'Скрыть';
+        svgElement.style.transform = 'rotate(180deg)';
     }
-});
-
-toggleBtn.addEventListener('click', function rotateSVG180(element) {
-    element.style.transform = 'rotate(180deg)';
 });
 
 // Инициализация Swiper при загрузке и ресайзе

@@ -92,6 +92,14 @@ svg {
     color: #000000;
 }
 
+.show-all {
+    display: flex;
+}
+.show-all-btn-svg {
+    justify-content: flex-end;
+    margin-right: 8px;
+}
+
 .brands-grid.desktop-layout .brand-item:nth-child(n+9) {
     display: none;
 }
