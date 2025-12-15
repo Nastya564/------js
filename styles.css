@@ -12,6 +12,8 @@
     margin-bottom: 24px;
     border-top: solid 2px #D9FFF5;
     margin-bottom: 30px;
+    background: linear-gradient(to right, transparent , white 60%);
+
 }
 
 .header h2 {
@@ -21,6 +23,7 @@
     color: #7E7E82;
     text-transform: uppercase;
     font-weight: 400;
+    background: linear-gradient(to right, transparent, white);
 }
 
 .brands-section {
@@ -137,6 +140,15 @@ button {
         display: none;
     }
 
+    .swiper-gradient {
+        width: 24px;
+        height: 81px;
+        background: linear-gradient(to right, transparent, white);
+        position: fixed;
+        left: 100%;
+        z-index: 20;
+    }
+
     .swiper-container {
         display: block;
         margin-bottom: 30px;
@@ -176,7 +188,6 @@ button {
     }
 
     .swiper-pagination-bullet {
-
         margin-right: 8px;
         background:#B5B6BC;
     }
