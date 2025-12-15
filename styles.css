@@ -172,9 +172,11 @@ button {
         left: 58px;
         width: 204px;
         height: 12px;
+        padding: 0;
     }
 
     .swiper-pagination-bullet {
+
         margin-right: 8px;
         background:#B5B6BC;
     }
