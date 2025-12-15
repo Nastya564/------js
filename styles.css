@@ -78,6 +78,7 @@ svg {
 button {
     background: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .show-all-btn {
