@@ -179,7 +179,8 @@ button {
         background:#B5B6BC;
     }
 
-    .show-all {
+    .show-all,
+    .show-all-btn-svg {
         display: none;
     }
 }
