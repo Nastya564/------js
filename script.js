@@ -20,6 +20,8 @@ function initSwiper() {
 // Обработка кнопки "Показать все"/"Скрыть"
 const toggleBtn = document.getElementById('toggle-btn');
 const brandsGrid = document.querySelector('.brands-grid');
+const svgElement = document.getElementById('toggle-btn__svg');
+
 
 toggleBtn.addEventListener('click', function() {
     const isExpanded = brandsGrid.classList.contains('expanded');
@@ -31,6 +33,10 @@ toggleBtn.addEventListener('click', function() {
         brandsGrid.classList.add('expanded');
         toggleBtn.textContent = 'Скрыть';
     }
+});
+
+toggleBtn.addEventListener('click', function rotateSVG180(element) {
+    element.style.transform = 'rotate(180deg)';
 });
 
 // Инициализация Swiper при загрузке и ресайзе
