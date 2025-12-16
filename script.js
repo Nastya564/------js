@@ -4,11 +4,18 @@ let swiper = null;
 function initSwiper() {
     if (window.innerWidth <= 790 && !swiper) {
         swiper = new Swiper('.swiper-container', {
-            slidesPerView: 2,
-            spaceBetween: 20,
+            simulateTouch: true,
+            allowTouchMove: true,
+            noSwiping: false,
+            preventInteractionOnTransition: false,
+            slidesPerView: 'auto',
+            spaceBetween: 16,
             pagination: {
                 el: '.swiper-pagination',
+                enabled: true, // Явно включаем
                 clickable: true,
+                type: 'bullets', // Явно указываем тип
+                dynamicBullets: false, // Для простых буллетов
             },
         });
     } else if (window.innerWidth > 790 && swiper) {
@@ -16,6 +23,12 @@ function initSwiper() {
         swiper = null;
     }
 }
+
+
+// Инициализация Swiper при загрузке и ресайзе
+window.addEventListener('load', initSwiper);
+window.addEventListener('resize', initSwiper);
+
 
 // Обработка кнопки "Показать все"/"Скрыть"
 const toggleBtn = document.getElementById('toggle-btn');
@@ -35,7 +48,3 @@ toggleBtn.addEventListener('click', function() {
         svgElement.style.transform = 'rotate(180deg)';
     }
 });
-
-// Инициализация Swiper при загрузке и ресайзе
-window.addEventListener('load', initSwiper);
-window.addEventListener('resize', initSwiper);
